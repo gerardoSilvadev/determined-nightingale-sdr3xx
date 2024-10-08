@@ -1,0 +1,96 @@
+/* Contenedor principal */
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Botones */
+.add-table-btn,
+.add-exercise-btn {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-table-btn:hover,
+.add-exercise-btn:hover {
+  background-color: #45a049;
+}
+
+/* Input de nombre de tabla */
+.table-name-input {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+}
+
+/* Estilo general de la tabla */
+.exercise-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.exercise-table th,
+.exercise-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.exercise-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.exercise-table td input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Hacer que la tabla se vea bien en pantallas pequeñas */
+@media (max-width: 768px) {
+  .exercise-table,
+  .exercise-table thead,
+  .exercise-table tbody,
+  .exercise-table th,
+  .exercise-table td,
+  .exercise-table tr {
+    display: block;
+  }
+
+  .exercise-table tr {
+    margin-bottom: 15px;
+  }
+
+  .exercise-table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .exercise-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .exercise-table th {
+    display: none;
+  }
+}
